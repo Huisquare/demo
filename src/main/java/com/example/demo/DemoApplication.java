@@ -8,7 +8,8 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 //		SpringApplication.run(DemoApplication.class, args);
-		var orderService = new OrderService(new PayPalPaymentService());
+		var orderService = new OrderService();
+		orderService.setPaymentService(new PayPalPaymentService());
 		orderService.placeOrder();
 	}
 
