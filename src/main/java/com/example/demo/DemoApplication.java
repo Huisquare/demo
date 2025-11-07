@@ -11,8 +11,9 @@ public class DemoApplication {
 
 		//app context is our IOC container
 		ApplicationContext context = SpringApplication.run(DemoApplication.class, args);
-		var orderService = context.getBean(OrderService.class);
-		orderService.placeOrder();
+//		var orderService = context.getBean(OrderService.class);
+//		orderService.placeOrder();
+		var heavyResource = context.getBean(HeavyResource.class);
 	}
 
 }
