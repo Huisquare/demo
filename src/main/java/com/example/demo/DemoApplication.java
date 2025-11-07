@@ -11,8 +11,8 @@ public class DemoApplication {
 
 		//app context is our IOC container
 		ApplicationContext context = SpringApplication.run(DemoApplication.class, args);
-		var notificationManager = context.getBean(NotificationManager.class);
-		notificationManager.sendNotification("ahola");
+		var orderService = context.getBean(OrderService.class);
+		orderService.placeOrder();
 	}
 
 }
