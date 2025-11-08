@@ -12,8 +12,10 @@ public class DemoApplication {
 
 		//app context is our IOC container
 		ConfigurableApplicationContext context = SpringApplication.run(DemoApplication.class, args);
-		var orderService = context.getBean(OrderService.class);
-		orderService.placeOrder();
+		var userService = context.getBean(UserService.class);
+
+		User user = new User(1L, "bellaDingDong@gmail.com", "encrypted", "bella");
+		userService.registerUser(user);
 		context.close();
 
 	}

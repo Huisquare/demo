@@ -10,3 +10,7 @@ stripe:
 
 payment:
   method: paypal
+
+email:
+  host: https://smtp.gmail.com
+  port: 5761
